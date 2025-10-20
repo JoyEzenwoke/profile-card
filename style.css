@@ -1,45 +1,166 @@
+/* ---------- General Page Setup ---------- */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #ffffff;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
 }
 
+/* ---------- Profile Card ---------- */
 article {
-  background: #d2dac7;
-  border-radius: 10px;
-  padding: 20px;
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 70px 40px 40px; /* top padding for nav */
   text-align: center;
-  width: 320px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+article:hover {
+  transform: translateY(-5px);
 }
 
-ul {
-  list-style: none;
+/* ---------- Top Navigation Bar ---------- */
+.main-nav {
+  position: absolute;
+  top: 20px; /* moves nav up neatly */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-a {
+.main-nav a {
   text-decoration: none;
   color: #007BFF;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-a:hover {
+.main-nav a:hover,
+.main-nav a.active {
+  color: #0056b3;
   text-decoration: underline;
 }
 
+/* ---------- Avatar ---------- */
+figure img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007BFF;
+  margin-bottom: 15px;
+}
+
+/* ---------- Text Elements ---------- */
+h2 {
+  margin-top: 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ---------- Social Links ---------- */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* ---------- Sections (Hobbies / Dislikes) ---------- */
+section {
+  margin-top: 25px;
+  text-align: left;
+}
+
+section h3 {
+  color: #9e3e3e;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+section ul li {
+  background: #e8f0fe;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+/* ---------- Responsive Design ---------- */
 @media (max-width: 600px) {
   article {
     width: 90%;
+    padding: 80px 20px 40px;
   }
+
+  .main-nav ul {
+    gap: 15px;
+  }
+
+  figure img {
+    width: 120px;
+    height: 120px;
+  }
+} /* <-- CLOSE the media query here */
+
+/* ---------- Contact Form Button ---------- */
+.btn {
+  background-color: #28a745; /* Green background */
+  color: white;
+  border: none;
+  display: block;
+  margin: 15px auto 0;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #218838; /* Darker green when hovered */
+  transform: translateY(-2px);
+}
+
+/* ---------- Success Message Styling ---------- */
+.success-message {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 15px;
 }

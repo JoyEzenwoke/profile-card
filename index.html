@@ -2,30 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile Card</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- The main profile card -->
+  <!-- Profile Card Container -->
   <article data-testid="test-profile-card">
-    <img src="myimage.jpg" alt="My photo" data-testid="test-user-avatar">
 
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Avatar Section -->
+    <figure>
+      <img src="myimage.jpg" alt="My photo" data-testid="test-user-avatar">
+    </figure>
+
+    <!-- User Name -->
     <h2 data-testid="test-user-name">Joy Ezenwoke</h2>
 
+    <!-- Short Biography -->
     <p data-testid="test-user-bio">
       I’m a frontend developer in training who loves designing simple and beautiful web pages.
     </p>
 
-    <p>Current time (milliseconds): <span data-testid="test-user-time"></span></p>
+    <!-- Current Time -->
+    <p>
+      Current time (milliseconds): 
+      <span data-testid="test-user-time"></span>
+    </p>
 
-    <nav>
-      <ul>
-        <li><a href="https://github.com/JoyEzenwoke" data-testid="test-user-social-links" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/joy-ezenwoke-" data-testid="test-user-social-links" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      </ul>
+    <!-- Social Links -->
+    <nav class="social-links" data-testid="test-user-social-links">
+      <a href="https://github.com/JoyEzenwoke" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+      <a href="https://x.com/Joy210566370229?t=zWXm6UpDmYzQqkSZeywEhA&s=09" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">x.com</a>
+      <a href="https://www.linkedin.com/in/joy-ezenwoke-" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
     </nav>
 
+    <!-- Hobbies Section -->
     <section>
       <h3>Hobbies</h3>
       <ul data-testid="test-user-hobbies">
@@ -35,14 +56,16 @@
       </ul>
     </section>
 
+    <!-- Dislikes Section -->
     <section>
       <h3>Dislikes</h3>
       <ul data-testid="test-user-dislikes">
         <li>Noise</li>
         <li>Dishonesty</li>
-        <li>Procastination</li>
+        <li>Procrastination</li>
       </ul>
     </section>
+
   </article>
 
   <script src="script.js"></script>

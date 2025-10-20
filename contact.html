@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <article data-testid="test-contact-page">
+    <!-- Navigation bar (same across all pages) -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <h2>Contact Me</h2>
+
+    <section data-testid="test-contact-form">
+      <p>Have a question, feedback, or opportunity? Feel free to reach out using the form below.</p>
+
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Full Name</label><br>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <p id="successMessage" class="success-message" style="display:none;">✅ Thank you! Your message has been sent successfully.</p>
+    </section>
+  </article>
+
+  <script>
+    // Simple validation + success message
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if (name && email && message) {
+        successMessage.style.display = 'block';
+        form.reset();
+
+        // Hide message after 4 seconds
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 4000);
+      } else {
+        alert('Please fill in all fields before submitting.');
+      }
+    });
+  </script>
+
+</body>
+</html>

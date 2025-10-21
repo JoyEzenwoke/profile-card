@@ -8,42 +8,40 @@
 </head>
 <body>
 
-  <!-- Profile Card Container -->
+<main>
+  <!-- Profile Card -->
   <article data-testid="test-profile-card">
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav class="main-nav">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Avatar Section -->
+    <!-- Avatar -->
     <figure>
-      <img src="myimage.jpg" alt="My photo" data-testid="test-user-avatar">
+      <img src="myimage.jpg" alt="Joy Ezenwoke photo" data-testid="test-user-avatar">
     </figure>
 
-    <!-- User Name -->
+    <!-- Name & Bio -->
     <h2 data-testid="test-user-name">Joy Ezenwoke</h2>
-
-    <!-- Short Biography -->
     <p data-testid="test-user-bio">
       I’m a frontend developer in training who loves designing simple and beautiful web pages.
     </p>
 
     <!-- Current Time -->
-    <p>
-      Current time (milliseconds): 
+    <p>Current time (milliseconds): 
       <span data-testid="test-user-time"></span>
     </p>
 
     <!-- Social Links -->
     <nav class="social-links" data-testid="test-user-social-links">
-      <a href="https://github.com/JoyEzenwoke" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
-      <a href="https://x.com/Joy210566370229?t=zWXm6UpDmYzQqkSZeywEhA&s=09" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">x.com</a>
-      <a href="https://www.linkedin.com/in/joy-ezenwoke-" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+      <a href="https://github.com/JoyEzenwoke" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github" aria-label="GitHub profile">GitHub</a>
+      <a href="https://x.com/Joy210566370229" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-x" aria-label="X profile">X</a>
+      <a href="https://www.linkedin.com/in/joy-ezenwoke-" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin" aria-label="LinkedIn profile">LinkedIn</a>
     </nav>
 
     <!-- Hobbies Section -->
@@ -67,7 +65,8 @@
     </section>
 
   </article>
+</main>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

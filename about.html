@@ -2,48 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main data-testid="test-about-page">
 
-  <article data-testid="test-about-page">
-    <!-- Navigation bar -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <h2>About Me</h2>
+  <h2>About Me</h2>
 
-    <section data-testid="test-about-bio">
-      <h3>Bio</h3>
-      <p>I’m Joy Ezenwoke, a frontend developer in training who loves creating clean and responsive websites. I enjoy turning ideas into interactive experiences that are both functional and beautiful.</p>
-    </section>
+  <section data-testid="test-about-bio">
+    <h3>Bio</h3>
+    <p>I’m Joy Ezenwoke, a frontend developer in training who loves creating clean and responsive websites.</p>
+  </section>
 
-    <section data-testid="test-about-goals">
-      <h3>Goals in this Program</h3>
-      <p>My main goal is to become confident in writing efficient, accessible, and responsive frontend code, and to collaborate with others to build real-world projects.</p>
-    </section>
+  <section data-testid="test-about-goals">
+    <h3>Goals in this Program</h3>
+    <p>My main goal is to become confident in writing efficient, accessible, and responsive frontend code, and to collaborate on real-world projects.</p>
+  </section>
 
-    <section data-testid="test-about-confidence">
-      <h3>Areas of Low Confidence</h3>
-      <p>I’m still building confidence in JavaScript logic and form validation, but I’m improving daily through practice.</p>
-    </section>
+  <section data-testid="test-about-confidence">
+    <h3>Areas of Low Confidence</h3>
+    <p>I’m still building confidence in JavaScript logic and form validation, but I’m improving daily through practice.</p>
+  </section>
 
-    <section data-testid="test-about-future-note">
-      <h3>Note to Future Self</h3>
-      <p>Keep believing in yourself. The effort you’re putting in now will pay off soon — stay consistent and never stop learning!</p>
-    </section>
+  <section data-testid="test-about-future-note">
+    <h3>Note to Future Self</h3>
+    <p>Keep believing in yourself. Stay consistent and never stop learning!</p>
+  </section>
 
-    <section data-testid="test-about-extra">
-      <h3>Extra Thoughts</h3>
-      <p>This journey has been exciting. Every stage teaches me something new about coding, design, and perseverance.</p>
-    </section>
-  </article>
+  <section data-testid="test-about-extra">
+    <h3>Extra Thoughts</h3>
+    <p>This journey has been exciting. Every stage teaches me something new about coding, design, and perseverance.</p>
+  </section>
 
+</main>
 </body>
 </html>
